@@ -9,12 +9,11 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
+     *  laravel automatski generisao ovo
+     *  opis promenljive za staticku analizu
      * @var list<string>
      */
     protected $fillable = [
@@ -24,8 +23,8 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
+     * 
+     * sakriveni atributi prilikom serijalizacije
      * @var list<string>
      */
     protected $hidden = [
@@ -34,7 +33,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * kastovanje atributa
      *
      * @return array<string, string>
      */
@@ -44,5 +43,21 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Veza: User ima vise Thread-ova
+     */
+    public function threads()
+    {
+        return $this->hasMany(Thread::class);
+    }
+
+    /**
+     * Veza: User ima vise Comment-ova
+     */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }
