@@ -12,9 +12,9 @@ use App\Http\Controllers\AuthController;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
-Route::apiResource('users', UserController::class);
-Route::apiResource('threads', ThreadController::class);
-Route::apiResource('comments', CommentController::class);
+Route::apiResource('users', UserController::class)->only(['index', 'show']);
+Route::apiResource('threads', ThreadController::class)->only(['index', 'show']);
+Route::apiResource('comments', CommentController::class)->only(['index', 'show']);
 
 Route::post('register', [AuthController::class, 'register']);  // registracija
 Route::post('login', [AuthController::class, 'login']);        // login
@@ -29,3 +29,13 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // ruta za reset lozinke
 Route::middleware('auth:sanctum')->post('/reset-password', [AuthController::class, 'resetPassword']);
+
+// delete korisnika – samo admin
+Route::delete('/users/{user}', [UserController::class, 'destroy'])
+    ->middleware(['auth:sanctum', 'can:manage-users'])
+    ->name('users.destroy');
+
+// delete threada – admin i moderator
+Route::delete('/threads/{thread}', [ThreadController::class, 'destroy'])
+    ->middleware(['auth:sanctum', 'can:manage-threads'])
+    ->name('threads.destroy');
