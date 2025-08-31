@@ -72,12 +72,12 @@ class AuthController extends Controller
         ]);
     }
 
-    // Reset lozinke
+    // Reset lozinke za ulogovanog korisnika
     public function resetPassword(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'email'       => 'required|email|exists:users,email',
-            'new_password'=> 'required|string|min:6|confirmed',
+            'current_password' => 'required|string',
+            'new_password'     => 'required|string|min:6|confirmed',
         ]);
 
         if ($validator->fails()) {
@@ -86,7 +86,16 @@ class AuthController extends Controller
             ], 422);
         }
 
-        $user = User::where('email', $request->email)->first();
+        $user = $request->user(); // Ulogovani korisnik
+
+        // Provera trenutne lozinke
+        if (!Hash::check($request->current_password, $user->password)) {
+            return response()->json([
+                'errors' => ['current_password' => ['Current password is incorrect']]
+            ], 422);
+        }
+
+        // Menjanje lozinke
         $user->password = Hash::make($request->new_password);
         $user->save();
 
@@ -94,4 +103,5 @@ class AuthController extends Controller
             'message' => 'Password successfully reset'
         ]);
     }
+
 }

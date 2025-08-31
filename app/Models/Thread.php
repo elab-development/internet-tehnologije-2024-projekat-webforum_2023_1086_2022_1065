@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -14,10 +13,11 @@ class Thread extends Model
         'title',
         'body',
         'user_id',
-        'status'
+        'status',
+        'category_id' 
     ];
 
-    // u nastavku: veze tabela (eloquent konvencija)
+    // veze tabela (eloquent konvencija)
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -27,4 +27,10 @@ class Thread extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
+
