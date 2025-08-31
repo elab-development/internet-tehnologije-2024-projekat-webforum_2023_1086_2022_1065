@@ -33,18 +33,11 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    /**
-     * kastovanje atributa
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+    // casts property
+    protected $casts = [
+    'email_verified_at' => 'datetime',
+    'password' => 'hashed',
+];
 
     /**
      * Veza: User ima vise Thread-ova
