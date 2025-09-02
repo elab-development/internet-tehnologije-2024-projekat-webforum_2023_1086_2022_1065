@@ -1,0 +1,102 @@
+body {
+    background-color: #4e5480;
+    margin: 0;
+    padding: 0;
+}
+
+.heder {
+    background: linear-gradient(180deg, #726acb 0%, #4f557f 100%);
+    padding: 20px;
+    height: 80px;
+}
+
+.imesajta{
+    font-family: Georgia;
+    font-weight: bolder;
+    font-size: 48px;
+    color: #9194da;
+    text-align: center;
+    margin: 10px;
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    padding: 10px;
+}
+
+li{
+    padding: 20px;
+}
+
+@keyframes animacija {
+    0%{background-color: #7d87c9; color:#2f315c; }
+    100%{background-color: #6872b0; color: #2f315c;}
+}
+
+.meni {
+    color:#2f315c;
+    font-family: Georgia;
+    font-size: 30px;
+    padding: 7px 15px;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+.meni:hover{
+    background-color: #113946;
+    animation-name: animacija;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.dugmenav{
+    width: 20%;
+    height: 700px;
+    background: #7D87C9;
+    background: linear-gradient(180deg, rgba(125, 135, 201, 1) 0%, rgba(78, 84, 128, 0) 80%);
+    border-radius: 20px 0px 0px 0px;
+/*    position: fixed;
+    top: 178px;
+    left: 90px;*/
+}
+
+.kontent {
+    display:flex;
+    flex: 0 1 auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 780px;
+    background-color: #7d87c9;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+    overflow-y: scroll;
+}
+
+.post {
+    width: 95%;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px 0px;
+    background-color: #585d933b;
+    
+}
+#posttekst{
+    font-size: 18px;
+}
+input{
+    width: 90%;
+}
