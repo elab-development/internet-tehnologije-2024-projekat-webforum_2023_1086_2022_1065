@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LoginInputField from "../components/LoginInputField";
 import ResetPassComp from "../components/ResetPassComp";
+import '../login.css';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
