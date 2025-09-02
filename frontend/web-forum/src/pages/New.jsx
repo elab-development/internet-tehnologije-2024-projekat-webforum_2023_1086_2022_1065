@@ -1,7 +1,7 @@
 import React from "react";
 import Header from '../components/Header';
-import Navbar from '../components/Navigation';
 import Feed from '../components/Feed';
+import Navigation from "../components/Navigation";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
 
       <div className="kontent">
 
-        <Navbar />
+        <Navigation />
 
         <Feed />
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./Post";
 
-const Feed = ({ brojPostova = 3 }) => {
+const Feed = ({ brojPostova = 10 }) => {
   // placeholder resenje
   const postovi = Array.from({ length: brojPostova });
 
