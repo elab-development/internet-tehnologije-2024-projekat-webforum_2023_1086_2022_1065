@@ -92,11 +92,33 @@ li{
     padding: 10px;
     margin: 20px 0px;
     background-color: #585d933b;
-    
 }
 #posttekst{
     font-size: 18px;
 }
-input{
-    width: 90%;
+.post input{
+    width: 80%;
+    height: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid #bdd7f3a1;
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(47, 44, 90);
+    padding: 20px 45px 20px 20px;
+    background-color: #4e548040;
+}
+.post button {
+    width: 10%;
+    height: 45px;
+    background-color: rgba(240, 255, 255, 0.608);
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
 }
