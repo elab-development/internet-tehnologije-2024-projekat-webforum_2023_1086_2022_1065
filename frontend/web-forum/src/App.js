@@ -3,6 +3,7 @@ import logo from './logo.svg';
 //import './style.css';
 import New from './pages/New'
 import LoginForm from './pages/LoginForm';
+import Filters from './components/Filters';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // rutiranje biblioteka
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<New />} />
         <Route path="/login" element={<LoginForm />} />
+        <Route path="/filter" element={<Filters />} />
       </Routes>
     </Router>
 

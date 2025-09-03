@@ -2,6 +2,7 @@ import React from "react";
 import Header from '../components/Header';
 import Feed from '../components/Feed';
 import Navigation from "../components/Navigation";
+import NavFilters from "../components/NavFIlters";
 import '../style.css';
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
       <div className="kontent">
 
-        <Navigation />
+        <NavFilters />
 
         <Feed />
 

@@ -5,7 +5,7 @@ body {
 }
 
 .heder {
-    background: linear-gradient(180deg, #726acb 0%, #4f557f 100%);
+    background: linear-gradient(180deg, #746ccb 0%, #4f557f 100%);
     padding: 20px;
     height: 80px;
 }
@@ -17,7 +17,6 @@ body {
     color: #9194da;
     text-align: center;
     margin: 10px;
-
 }
 
 nav ul {
@@ -26,6 +25,7 @@ nav ul {
     list-style-type: none;
     justify-content: center;
     padding: 10px;
+    margin-top: 0px;
 }
 
 li{
@@ -55,17 +55,6 @@ li{
     animation-direction: alternate;
 }
 
-.dugmenav{
-    width: 20%;
-    height: 700px;
-    background: #7D87C9;
-    background: linear-gradient(180deg, rgba(125, 135, 201, 1) 0%, rgba(78, 84, 128, 0) 80%);
-    border-radius: 20px 0px 0px 0px;
-/*    position: fixed;
-    top: 178px;
-    left: 90px;*/
-}
-
 .kontent {
     display:flex;
     flex: 0 1 auto;
@@ -73,6 +62,7 @@ li{
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .feed {
@@ -83,7 +73,15 @@ li{
     background-color: #7d87c9;
     align-items: center;
     border-radius: 0px 20px 20px 0px;
+}
+
+.postovi{
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: #7d87c9;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .post {
@@ -92,11 +90,193 @@ li{
     padding: 10px;
     margin: 20px 0px;
     background-color: #585d933b;
-    
 }
 #posttekst{
     font-size: 18px;
 }
-input{
-    width: 90%;
+.post input{
+    width: 80%;
+    height: 10px;
+    border: none;
+    outline: none;
+    border: 2px solid #bdd7f3a1;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #2f2c5a;
+    padding: 20px 45px 20px 20px;
+    background-color: #4e548040;
+}
+
+.post button {
+    width: 10%;
+    height: 45px;
+    background-color: rgba(240, 255, 255, 0.608);
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.newthr p{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Georgia;
+    color: #bbb6f1;
+}
+
+.newthr{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 10px;
+    background-color: #635cb466;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.naslov{
+    border-radius: 20px;
+    width: 81%;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #bec5f3dd;
+    padding: 10px 15px;
+}
+
+.dodaj{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: end;
+}
+
+.dodaj button{
+    width: 15%;
+    height: 45px;
+    background-color: azure;
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.threadfield{
+    border-radius: 20px;
+    width: 85%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #bec5f3dd;
+}
+
+.side{
+    margin-top: 0px;
+    width: 20%;
+}
+
+.kategorije{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    background: #7D87C9;
+    background: linear-gradient(180deg, #7d87c9 0%, #4e548000 90%);
+    border-radius: 20px 0px 0px 0px;
+}
+
+.kategorije p {
+    font-size: 20px;
+    text-align: center;
+    
+    color: #2f2c5a;
+}
+
+#odabir {
+    width: 87%;
+    align-self: center;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #bec5f3dd;
+    padding: 10px 15px;
+}
+
+.search{
+    margin-top: 10px;
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 5px;
+}
+
+.search input{
+    width: 70%;
+    border-radius: 20px;
+    height: 10px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    background-color: #bec5f3dd;
+    padding: 10px 15px;
+}
+
+.search button{
+    background-color: #f0ffff9b;
+    border:none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.dugmenav{
+/*    width: 100%;*/
+    height: 500px;
+    background: #7D87C9;
+    background: linear-gradient(180deg, #7d87c9 0%, #4e548000 80%);
+    border-radius: 20px 0px 0px 0px;
+}
+
+.cekboks{
+    align-self: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2f2c5a;
+}
+
+.menjanje{
+    display: flex;
+    margin-top: 10px ;
+}
+
+.menjanje p{
+    margin: 0 5px;
+    color: #2f2c5a;
+}
+.menjanje a{
+    text-decoration: none;
+    color: #2f2c5a;
 }

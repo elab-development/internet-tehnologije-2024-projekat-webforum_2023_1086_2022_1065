@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>web forum</title>
 </head>
 <body>
-    
+    <div class="pozadina">
+        <header class="heder">
+            <h1 class="imesajta">Kerfuffle</h1>
+
+        </header>
+
+        <div class="kontent">
+
+            <div class="side">
+               <nav class="dugmenav">
+                <ul>
+                    <li><a href="html folder/novo.html" class="meni">Novo</a></li>
+                    <li><a href="html folder/kategorije.html" class="meni">Kategorije</a></li>
+                    <li><a href="#" class="meni">Odjava</a></li>
+                </ul>
+            </nav>
+
+            <div class="kategorije">
+                <p>Kategorije i pretraga</p>
+                    <select name="odabir" id="odabir">
+                        <option value="1">Zabava</option>
+                        <option value="2">Društvo</option>
+                        <option value="3">Tehnologija</option>
+                        <option value="4">Obrazovanje</option>
+                        <option value="5">Igrice</option>
+                        <option value="6">Razgovori</option>
+                    </select>
+                    <div class="search">
+                        <input type="text" class="pretraga"><button>Pretraži</button>
+                    </div>
+                    <div class="cekboks">
+                        <input type="checkbox" name="open" id="open"><label for="open">Thread open</label>
+                    </div>  
+            </div>
+
+            </div>
+            
+
+            <div class="feed">
+                
+                <div class="menjanje">
+                    <a href="">&lt</a> <p>1</p> <a href="">&gt</a>
+                </div>
+
+                <div class="newthr">
+                    <p>Postavi novi thread</p>
+                    <input type="text" class="naslov" placeholder="Thread naslov">
+                    <div class="dodaj">
+                        <textarea name="tekst" class="threadfield" rows="3" placeholder="O čemu razmišljaš?"></textarea>
+                        <button type="submit">Postavi</button>
+                    </div>
+                </div>
+                <div class="postovi">
+                    <div class="post">
+                        <h3 class="imekorisnika">Ime Prezime</h3>
+                        <p id="posttekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis reiciendis et rem, quia veniam quibusdam possimus maiores neque quam, nulla natus quod eum nam animi vel at illum. Vel.</p>
+                        <input type="text" placeholder="Vaš komentar...">
+                        <button type="submit">Postuj</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

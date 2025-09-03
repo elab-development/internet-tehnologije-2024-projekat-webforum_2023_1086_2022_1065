@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Thread from "./ThreadCollapsed";
 import NewThread from "./NewThread";
+import Pagination from "./Pagination";
 
 const Feed = ({ brojThreadova = 10 }) => {
   const [threadovi, setThreadovi] = useState([]);
@@ -23,6 +24,7 @@ const Feed = ({ brojThreadova = 10 }) => {
 
   return (
     <div className="feed">
+      <Pagination />
       <NewThread />
       {threadovi.map(thread => (
       <Thread key={thread.id} {...thread} />
