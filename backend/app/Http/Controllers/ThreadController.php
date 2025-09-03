@@ -8,7 +8,10 @@ class ThreadController extends Controller
 {
     public function index()
     {
-        $threads = Thread::with('user', 'comments', 'category')->get();
+        $threads = Thread::with('user', 'comments', 'category')
+            ->orderBy('created_at', 'desc') // sortiranje po datumu kreacije
+            ->get();
+
         return response()->json($threads);
     }
 
@@ -90,7 +93,9 @@ class ThreadController extends Controller
             });
         }
 
-        $threads = $query->get();
+        $threads = $query
+        ->orderBy('created_at', 'desc') // sortiranje po datumu kreacije
+        ->get();
 
         return response()->json($threads);
     }
