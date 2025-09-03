@@ -22,9 +22,9 @@ const Feed = ({ brojThreadova = 10 }) => {
 
   return (
     <div className="feed">
-      {threadovi.map((thread) => (
-        threadovi.map(thread => <Thread key={thread.id} {...thread} />) // mapira prema id ...thread otpakuje json (videti thread komponentu)
-      ))}
+      {threadovi.map(thread => (
+      <Thread key={thread.id} {...thread} />
+    ))}
     </div>
   );
 };
