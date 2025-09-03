@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Thread from "./ThreadCollapsed";
+import NewThread from "./NewThread";
 
 const Feed = ({ brojThreadova = 10 }) => {
   const [threadovi, setThreadovi] = useState([]);
@@ -22,6 +23,7 @@ const Feed = ({ brojThreadova = 10 }) => {
 
   return (
     <div className="feed">
+      <NewThread />
       {threadovi.map(thread => (
       <Thread key={thread.id} {...thread} />
     ))}

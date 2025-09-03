@@ -5,7 +5,7 @@ body {
 }
 
 .heder {
-    background: linear-gradient(180deg, #726acb 0%, #4f557f 100%);
+    background: linear-gradient(180deg, #746ccb 0%, #4f557f 100%);
     padding: 20px;
     height: 80px;
 }
@@ -59,7 +59,7 @@ li{
     width: 20%;
     height: 700px;
     background: #7D87C9;
-    background: linear-gradient(180deg, rgba(125, 135, 201, 1) 0%, rgba(78, 84, 128, 0) 80%);
+    background: linear-gradient(180deg, #7d87c9 0%, #4e548000 80%);
     border-radius: 20px 0px 0px 0px;
 /*    position: fixed;
     top: 178px;
@@ -83,9 +83,15 @@ li{
     background-color: #7d87c9;
     align-items: center;
     border-radius: 0px 20px 20px 0px;
-    overflow-y: scroll;
 }
-
+.postovi{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: #7d87c9;
+    align-items: center;
+    border-radius: 0px 20px 20px 0px;
+}
 .post {
     width: 95%;
     height: fit-content;
@@ -104,7 +110,7 @@ li{
     border: 2px solid #bdd7f3a1;
     border-radius: 40px;
     font-size: 16px;
-    color: rgb(47, 44, 90);
+    color: #2f2c5a;
     padding: 20px 45px 20px 20px;
     background-color: #4e548040;
 }
@@ -121,4 +127,178 @@ li{
     font-size: 16px;
     font-weight: 600;
     margin-left: 15px;
+}
+
+.newthr p{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Georgia;
+    color: #bbb6f1;
+}
+
+.newthr{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 20px;
+    background-color: #635cb466;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.naslov{
+    border-radius: 20px;
+    width: 81%;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #bec5f3dd;
+    padding: 10px 15px;
+}
+
+.dodaj{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: end;
+}
+.dodaj button{
+    width: 15%;
+    height: 45px;
+    background-color: azure;
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.threadfield{
+    border-radius: 20px;
+    width: 85%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #bec5f3dd;
+}
+
+.login-wrapper * {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-wrapper{
+    background: radial-gradient(circle,rgba(163, 212, 165, 1) 0%, rgba(125, 178, 201, 1) 19%, rgba(61, 70, 138, 1) 79%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.kutija{
+   width: 420px;
+   border-radius: 10px;
+   background-color: #3d468a99;
+   padding: 30px 40px;
+}
+
+.kutija h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.kutija .polje {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.kutija input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #d2e5faa1;
+    border-radius: 40px;
+    font-size: 16px;
+    color: aliceblue;
+    padding: 20px 45px 20px 20px;
+}
+
+.kutija .zapamti {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px;
+    font-size: 14px;
+}
+.kutija .zapamti label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.kutija .zapamti input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.zapamti label input {
+    accent-color: aliceblue;
+    margin-right: 3px;
+}
+
+.zapamti a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.zapamti a:hover {
+    text-decoration: underline;
+}
+
+.kutija button{
+    width: 100%;
+    height: 45px;
+    background-color: azure;
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    color: #3D468A;
+    box-shadow: 0 0 10px #0000005c;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.kutija .registracija {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.kutija .reg {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.kutija .reg:hover {
+    text-decoration: underline;
 }

@@ -1,4 +1,4 @@
-* {
+.login-wrapper * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
+.login-wrapper{
     background: radial-gradient(circle,rgba(163, 212, 165, 1) 0%, rgba(125, 178, 201, 1) 19%, rgba(61, 70, 138, 1) 79%);
     display: flex;
     flex-direction: column;
