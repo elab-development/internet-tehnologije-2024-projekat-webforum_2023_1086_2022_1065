@@ -1,6 +1,6 @@
 import React from "react";
 
-const Thread = ({ title, body, status, user, category}) => { // u zagradi je dictionary propova (property valjda???)
+const Thread = ({ id, title, body, status, user, category}) => { // u zagradi je dictionary propova (property valjda???)
   return (
     <div className="post">
       <h3 className="imekorisnika">{user.username}</h3>
