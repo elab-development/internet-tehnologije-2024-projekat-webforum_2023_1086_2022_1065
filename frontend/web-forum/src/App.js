@@ -3,7 +3,7 @@ import logo from './logo.svg';
 //import './style.css';
 import New from './pages/New'
 import LoginForm from './pages/LoginForm';
-import Filters from './components/Filters';
+import Filters from './pages/FiltersPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // rutiranje biblioteka
 
 function App() {

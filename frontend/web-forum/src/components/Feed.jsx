@@ -26,9 +26,12 @@ const Feed = ({ brojThreadova = 10 }) => {
     <div className="feed">
       <Pagination />
       <NewThread />
-      {threadovi.map(thread => (
-      <Thread key={thread.id} {...thread} />
-    ))}
+      <div className="postovi">
+        {threadovi.map(thread => (
+          <Thread key={thread.id} {...thread} />
+        ))}
+      </div>
+      
     </div>
   );
 };
