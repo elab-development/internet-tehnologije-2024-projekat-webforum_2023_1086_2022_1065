@@ -9,7 +9,7 @@ const Thread = ({ id, title, body, status, user, category}) => { // u zagradi je
         {body}
       </p>
       <input type="text" placeholder="Vaš komentar..." />
-      <button type="submit">Postuj</button>
+      <button type="submit">Postavi</button>
     </div>
   );
 };

@@ -141,6 +141,7 @@ li{
 }
 
 .naslov{
+    margin-top: 8px;
     border-radius: 20px;
     width: 81%;
     height: 20px;
@@ -396,4 +397,11 @@ li{
     background: linear-gradient(180deg, #7d87c9 0%, #4e548000 80%);
     border-radius: 20px 0px 0px 0px;
     width: 20%;
+}
+
+#izbor-kategorija-label{
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
 }
