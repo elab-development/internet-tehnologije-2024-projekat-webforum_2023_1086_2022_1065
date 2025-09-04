@@ -1,22 +1,59 @@
 import React, { useState } from "react";
 import LoginInputField from "../components/LoginInputField";
 import ResetPassComp from "../components/ResetPassComp";
-import '../style.css';
+import "../style.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Login data:", formData);
-    // ovde ide logika za login
+
+    try {
+      const response = await fetch("http://localhost:8000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        alert("Login neuspešan!");
+        return;
+      }
+
+      const data = await response.json();
+
+      // snimanje tokena u localStorage
+      localStorage.setItem("authToken", data.token);
+
+      // podsetnik za vracanje:
+      // const token = localStorage.getItem("authToken");
+      // fetch("http://localhost:8000/api/protected", {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // });
+
+
+      alert("Login uspešan!");
+
+      // redirect na početnu
+      navigate("/");
+    } catch (error) {
+      console.error("Greška prilikom logina:", error);
+      alert("Došlo je do greške pri loginu!");
+    }
   };
 
   return (
@@ -26,9 +63,9 @@ const LoginForm = () => {
 
         <LoginInputField
           type="text"
-          placeholder="Korisničko ime"
-          name="username"
-          value={formData.username}
+          placeholder="Email"
+          name="email"
+          value={formData.email}
           onChange={handleChange}
         />
 
@@ -48,7 +85,6 @@ const LoginForm = () => {
           <p>
             Nemate nalog?
             <a href="#" className="reg">
-              {" "}
               Registrujte se!
             </a>
           </p>
