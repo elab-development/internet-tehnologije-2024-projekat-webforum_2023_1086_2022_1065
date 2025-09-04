@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoginInputField from "../components/LoginInputField";
 import ResetPassComp from "../components/ResetPassComp";
 import "../style.css";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -36,15 +38,6 @@ const LoginForm = () => {
 
       // snimanje tokena u localStorage
       localStorage.setItem("authToken", data.token);
-
-      // podsetnik za vracanje:
-      // const token = localStorage.getItem("authToken");
-      // fetch("http://localhost:8000/api/protected", {
-      //   headers: {
-      //     Authorization: `Bearer ${token}`,
-      //   },
-      // });
-
 
       alert("Login uspešan!");
 
