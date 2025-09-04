@@ -36,8 +36,9 @@ const LoginForm = () => {
 
       const data = await response.json();
 
-      // snimanje tokena u localStorage
+      // snimanje tokena i username-a u localStorage
       localStorage.setItem("authToken", data.token);
+      localStorage.setItem("username", data.user.username);
 
       alert("Login uspešan!");
 

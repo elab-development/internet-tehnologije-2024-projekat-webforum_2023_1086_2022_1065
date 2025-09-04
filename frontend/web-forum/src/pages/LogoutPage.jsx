@@ -20,6 +20,7 @@ const Logout = () => {
         })
         .finally(() => {
           localStorage.removeItem("authToken");
+          localStorage.removeItem("username");
           navigate("/");
         });
     } else {
