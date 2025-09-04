@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Pagination = ({ totalPages = 5 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+const Pagination = ({ currentPage, totalCount, pageSize, onPageChange }) => {
+  const totalPages = Math.ceil(totalCount / pageSize);
 
   const goPrev = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+      onPageChange(currentPage - 1);
     }
   };
 
   const goNext = () => {
     if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+      onPageChange(currentPage + 1);
     }
   };
 
