@@ -235,9 +235,9 @@ li{
 
 .kutija .zapamti {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 15px 0 15px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .kutija .zapamti label {
   display: flex;
@@ -255,15 +255,6 @@ li{
 .zapamti label input {
     accent-color: aliceblue;
     margin-right: 3px;
-}
-
-.zapamti a {
-    color: aliceblue;
-    text-decoration: none;
-}
-
-.zapamti a:hover {
-    text-decoration: underline;
 }
 
 .kutija button{
@@ -401,8 +392,6 @@ li{
     color: #ffffff;
 }
 
-/*------------------------------*/
-/* dodato iz novog fajla, ne postojalo u glavnom */
 .podesavanja{
     display: flex;
     flex-direction: column;
@@ -479,4 +468,26 @@ li{
     font-size: 16px;
     font-weight: 600;
     margin-left: 15px;
+}
+
+.promena_lozinke{
+    display: flex;
+    flex-direction: row ;
+    width: 90%;
+    font-weight: 600;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.promena_lozinke label{
+    width: 21%;
+}
+.promena_lozinke input{
+    width: 30%;
+    border-radius: 20px;
+    height: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #bec5f3dd;
 }

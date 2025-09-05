@@ -69,30 +69,40 @@ const App = () => {
               <p className="stavke">Korisničko ime: </p>
               <p>{username}</p>
             </div>
+            <div>
+              <div className="promena_lozinke">
+                <label htmlFor="trenutna-loz">Unesi trenutnu lozinku: </label>
+                <input
+                  type="password"
+                  id="trenutna-loz"
+                  value={currentPassword}
+                  onChange={(e) => setCurrentPassword(e.target.value)}
+                />
+              </div>
+                
+              <div className="promena_lozinke">
+                <label htmlFor="nova-loz">Unesi novu lozinku: </label>
+                <input
+                  type="password"
+                  id="nova-loz"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+              </div>
+                
+              <div className="promena_lozinke">
+                <label htmlFor="potvrda-loz">Potvrdite novu lozinku: </label>
+                <input
+                  type="password"
+                  id="potvrda-loz"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+              </div>
+                
 
-            <label htmlFor="trenutna-loz">Unesi trenutnu lozinku: </label>
-            <input
-              type="password"
-              id="trenutna-loz"
-              value={currentPassword}
-              onChange={(e) => setCurrentPassword(e.target.value)}
-            />
-
-            <label htmlFor="nova-loz">Unesi novu lozinku: </label>
-            <input
-              type="password"
-              id="nova-loz"
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}
-            />
-
-            <label htmlFor="potvrda-loz">Potvrdite novu lozinku: </label>
-            <input
-              type="password"
-              id="potvrda-loz"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
+            </div>
+            
 
             <button onClick={handlePasswordChange}>Promeni lozinku</button>
           </div>

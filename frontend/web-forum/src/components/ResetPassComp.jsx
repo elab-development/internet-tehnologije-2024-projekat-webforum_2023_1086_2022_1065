@@ -6,7 +6,6 @@ const ResetPassComp = () => {
       <label>
         <input type="checkbox" /> Zapamti me
       </label>
-      <a href="#">Zaboravljena lozinka?</a>
     </div>
   );
 };
