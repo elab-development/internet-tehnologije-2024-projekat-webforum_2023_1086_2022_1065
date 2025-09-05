@@ -21,6 +21,7 @@ const Logout = () => {
         .finally(() => {
           localStorage.removeItem("authToken");
           localStorage.removeItem("username");
+          localStorage.removeItem("email");
           navigate("/");
         });
     } else {

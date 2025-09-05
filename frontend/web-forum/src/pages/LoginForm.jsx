@@ -39,6 +39,7 @@ const LoginForm = () => {
       // snimanje tokena i username-a u localStorage
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("username", data.user.username);
+      localStorage.setItem("email", data.user.email);
 
       alert("Login uspešan!");
 
