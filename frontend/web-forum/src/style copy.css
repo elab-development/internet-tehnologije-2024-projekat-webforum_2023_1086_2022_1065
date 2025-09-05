@@ -83,6 +83,7 @@ li{
     background-color: #7d87c9;
     align-items: center;
     border-radius: 0px 20px 20px 0px;
+    overflow-y: scroll;
 }
 .post {
     width: 95%;
@@ -137,6 +138,7 @@ li{
     background-color: #635cb466;
     padding: 10px;
     border-radius: 20px;
+    
 }
 
 .naslov{
@@ -146,9 +148,10 @@ li{
     height: 20px;
     border: none;
     outline: none;
-    padding: 10px 15px;
+    padding: 5px;
     font-size: 16px;
     background-color: #bec5f3dd;
+    padding: 10px 15px;
 }
 
 .dodaj{
@@ -305,6 +308,7 @@ li{
     display: flex;
     flex-direction: column;
     height: 270px;
+    background: #7D87C9;
     background: linear-gradient(180deg, #7d87c9 0%, #4e548000 90%);
     border-radius: 20px 0px 0px 0px;
 }
@@ -312,6 +316,7 @@ li{
 .kategorije p {
     font-size: 20px;
     text-align: center;
+    
     color: #2f2c5a;
 }
 
@@ -340,9 +345,10 @@ li{
     height: 10px;
     border: none;
     outline: none;
-    padding: 10px 15px;
+    padding: 5px;
     font-size: 14px;
     background-color: #bec5f3dd;
+    padding: 10px 15px;
 }
 
 .search button{
@@ -356,6 +362,7 @@ li{
     cursor: pointer;
     font-size: 12px;
 }
+
 
 .cekboks{
     align-self: center;
@@ -399,84 +406,4 @@ li{
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
-}
-
-/*------------------------------*/
-/* dodato iz novog fajla, ne postojalo u glavnom */
-.podesavanja{
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    color:#2f315c;
-    font-size: larger;
-}
-.podesavanja h2{
-    background-color: #2f2c5a37;
-    padding: 10px;
-}
-.email-podesavanja, .username-podesavanja{
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.stavke{
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.podesavanja button{
-    width: 20%;
-    height: 30px;
-    background-color: #ffffffdd;
-    border:none;
-    outline: none;
-    border-radius: 10px;
-    font-weight: 500;
-    color: #3D468A;
-    cursor: pointer;
-    font-size: 18px;
-}
-.komentari {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin: 0;
-    overflow-y: scroll;
-}
-.komentari .post{
-    background-color: #484784c4;
-    color: #a9ace7;
-    border-radius: 0 0 10px 10px;
-}
-.main-post {
-    width: 95%;
-    height: fit-content;
-    padding: 10px;
-    margin: 20px 0px;
-    background-color: #585d933b;
-}
-.main-post input{
-    width: 80%;
-    height: 10px;
-    border: none;
-    outline: none;
-    border: 2px solid #bdd7f3a1;
-    border-radius: 40px;
-    font-size: 16px;
-    color: #2f2c5a;
-    padding: 20px 45px 20px 20px;
-    background-color: #4e548040;
-}
-.main-post button {
-    width: 10%;
-    height: 45px;
-    background-color: rgba(240, 255, 255, 0.608);
-    border:none;
-    outline: none;
-    border-radius: 40px;
-    color: #3D468A;
-    box-shadow: 0 0 10px #0000005c;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 15px;
 }

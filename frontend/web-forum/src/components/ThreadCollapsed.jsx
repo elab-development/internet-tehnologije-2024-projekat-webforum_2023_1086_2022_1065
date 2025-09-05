@@ -1,4 +1,5 @@
 import React from "react";
+import NewComment from "./NewComment";
 
 const Thread = ({ id, title, body, status, user, category_id, created_at }) => {
   // array kategorija po id-u
@@ -24,8 +25,7 @@ const Thread = ({ id, title, body, status, user, category_id, created_at }) => {
         {title}
       </h3>
       <p id="posttekst">{body}</p>
-      <input type="text" placeholder="Vaš komentar..." />
-      <button type="submit">Postavi</button>
+      <NewComment thread_id={id} />
     </div>
   );
 };

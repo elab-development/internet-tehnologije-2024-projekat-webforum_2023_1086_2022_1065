@@ -5,6 +5,7 @@ import New from './pages/New'
 import LoginForm from './pages/LoginForm';
 import Filters from './pages/FiltersPage';
 import Logout from './pages/LogoutPage';
+import ThreadPage from './pages/ThreadPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // rutiranje biblioteka
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/filter" element={<Filters />} />
+        <Route path="/thread/:id" element={<ThreadPage />} />
       </Routes>
     </Router>
 
