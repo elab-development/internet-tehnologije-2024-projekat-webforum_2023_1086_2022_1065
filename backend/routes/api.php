@@ -57,3 +57,5 @@ Route::delete('/threads/{thread}', [ThreadController::class, 'destroy'])
 Route::apiResource('categories', CategoryController::class)
     ->only(['index', 'show']);
 
+// vraca sve komentare na thread-u NETESTIRANO
+Route::get('/threads/{thread_id}/comments', [CommentController::class, 'getByThread']);

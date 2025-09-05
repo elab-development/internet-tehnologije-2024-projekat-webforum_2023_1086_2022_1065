@@ -69,4 +69,14 @@ class CommentController extends Controller
 
         return response()->json(['message' => 'Comment deleted successfully']);
     }
+
+    public function getByThread($thread_id)
+    {
+        $comments = Comment::where('thread_id', $thread_id)
+            ->with('user') // opcionalno vraca podatke o autoru
+            ->get();
+
+        return response()->json($comments);
+    }
+
 }
