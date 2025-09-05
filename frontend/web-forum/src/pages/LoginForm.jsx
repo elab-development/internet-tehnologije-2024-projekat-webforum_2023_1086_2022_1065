@@ -79,7 +79,7 @@ const LoginForm = () => {
         <div className="registracija">
           <p>
             Nemate nalog?
-            <a href="#" className="reg">
+            <a href="/register" className="reg">
               Registrujte se!
             </a>
           </p>
