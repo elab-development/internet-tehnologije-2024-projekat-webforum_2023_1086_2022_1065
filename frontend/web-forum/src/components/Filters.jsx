@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Filters = () => {
+const Filters = ({ onSearch }) => {
   const [category, setCategory] = useState("1");
   const [searchText, setSearchText] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+
+  // default filteri
+  useEffect(() => {
+    onSearch({ category, searchText, isOpen });
+  }, []); 
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log("Pretraga:", { category, searchText, isOpen });
+    onSearch({ category, searchText, isOpen });
   };
 
   return (
@@ -42,7 +47,7 @@ const Filters = () => {
           type="checkbox"
           name="open"
           id="open"
-          checked={isOpen}
+          checked={isOpen}               
           onChange={(e) => setIsOpen(e.target.checked)}
         />
         <label htmlFor="open">Thread open</label>

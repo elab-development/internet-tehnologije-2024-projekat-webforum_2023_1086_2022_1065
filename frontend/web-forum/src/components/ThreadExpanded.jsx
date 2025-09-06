@@ -45,7 +45,7 @@ const ThreadExpanded = ({ id, title, body, status, user, category_id, created_at
           {title}
         </h3>
         <p id="posttekst">{body}</p>
-        <NewComment thread_id={id} />
+        {status == "open" ? <NewComment thread_id={id} /> : <p id="thread-closed">Thread zatvoren!</p>}
       </div>
 
       <div className="komentari">

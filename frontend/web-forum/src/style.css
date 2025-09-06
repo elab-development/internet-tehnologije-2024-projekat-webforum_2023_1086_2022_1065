@@ -491,3 +491,7 @@ li{
     font-size: 14px;
     background-color: #bec5f3dd;
 }
+
+#thread-closed{
+    color: red;
+}
