@@ -1,11 +1,11 @@
 body {
-    background-color: #4e5480;
+    background-color: #43528a;
     margin: 0;
     padding: 0;
 }
 
 .heder {
-    background: linear-gradient(180deg, #746ccb 0%, #4f557f 100%);
+    background: linear-gradient(180deg, #524c9bd2 0%, #43528acb 100%);
     padding: 20px;
     height: 80px;
 }
@@ -58,7 +58,6 @@ li{
 .kontent {
     display:flex;
     flex: 0 1 auto;
-    /* flex-direction: column; */
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
@@ -193,7 +192,7 @@ li{
 }
 
 .login-wrapper{
-    background: radial-gradient(circle,rgba(163, 212, 165, 1) 0%, rgba(125, 178, 201, 1) 19%, rgba(61, 70, 138, 1) 79%);
+    background: radial-gradient(circle,#a3d4a5 0%, #7db2c9 19%, #3d468a 79%);
     display: flex;
     flex-direction: column;
     justify-content: center;
