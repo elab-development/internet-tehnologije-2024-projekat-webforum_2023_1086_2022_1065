@@ -7,7 +7,7 @@ body {
 .heder {
     background: linear-gradient(180deg, #524c9bd2 0%, #43528acb 100%);
     padding: 20px;
-    height: 80px;
+    height: 90px;
 }
 
 .imesajta{
@@ -493,4 +493,14 @@ li{
 
 #thread-closed{
     color: red;
+}
+
+#mod-tools{
+
+    margin-bottom: 8px;
+}
+
+#header-login-info{
+    font-size: 16px;
+    color: whitesmoke;
 }

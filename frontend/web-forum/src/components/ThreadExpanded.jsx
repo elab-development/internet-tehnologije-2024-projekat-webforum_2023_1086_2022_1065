@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Comment from "./Comment";
 import NewComment from "./NewComment";
+import ThreadMod from "./ThreadMod";
+import { useAuthCheck } from "../hooks/checkPrivileges";
 
 const ThreadExpanded = ({ id, title, body, status, user, category_id, created_at }) => {
   const [comments, setComments] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const { hasPrivilegedRole } = useAuthCheck();
 
   // array kategorija po id-u
   const categories = ["Društvo", "Zabava", "Tehnologija", "Obrazovanje", "Igrice"];
@@ -45,7 +49,14 @@ const ThreadExpanded = ({ id, title, body, status, user, category_id, created_at
           {title}
         </h3>
         <p id="posttekst">{body}</p>
-        {status == "open" ? <NewComment thread_id={id} /> : <p id="thread-closed">Thread zatvoren!</p>}
+
+        {hasPrivilegedRole && <ThreadMod threadId={id} />}
+
+        {status === "open" ? (
+          <NewComment thread_id={id} />
+        ) : (
+          <p id="thread-closed">Thread zatvoren!</p>
+        )}
       </div>
 
       <div className="komentari">

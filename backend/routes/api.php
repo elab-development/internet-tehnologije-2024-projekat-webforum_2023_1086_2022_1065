@@ -53,6 +53,10 @@ Route::delete('/threads/{thread}', [ThreadController::class, 'destroy'])
     ->middleware(['auth:sanctum', 'can:manage-threads'])
     ->name('threads.destroy');
 
+Route::patch('/threads/{thread}/close', [ThreadController::class, 'close'])
+    ->middleware(['auth:sanctum', 'can:manage-threads'])
+    ->name('threads.close');
+    
 // kategorije TESTIRANO
 Route::apiResource('categories', CategoryController::class)
     ->only(['index', 'show']);

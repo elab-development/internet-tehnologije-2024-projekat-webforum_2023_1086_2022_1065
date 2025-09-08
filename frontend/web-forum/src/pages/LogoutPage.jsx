@@ -22,6 +22,7 @@ const Logout = () => {
           localStorage.removeItem("authToken");
           localStorage.removeItem("username");
           localStorage.removeItem("email");
+          localStorage.removeItem("role");
           navigate("/");
         });
     } else {

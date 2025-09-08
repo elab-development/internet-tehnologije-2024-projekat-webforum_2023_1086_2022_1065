@@ -40,7 +40,7 @@ const LoginForm = () => {
       localStorage.setItem("authToken", data.token);
       localStorage.setItem("username", data.user.username);
       localStorage.setItem("email", data.user.email);
-
+      localStorage.setItem("role", data.user.role);
       alert("Login uspešan!");
 
       // redirect na početnu
@@ -72,7 +72,7 @@ const LoginForm = () => {
           onChange={handleChange}
         />
 
-        <ResetPassComp />
+        {/* <ResetPassComp /> */}
 
         <button type="submit">Uloguj se</button>
 

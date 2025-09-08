@@ -100,4 +100,22 @@ class ThreadController extends Controller
         return response()->json($threads);
     }
 
+    public function close(Request $request, $id)
+    {
+        $thread = Thread::findOrFail($id);
+        
+        if ($thread->status === 'closed') {
+            return response()->json(['message' => 'Thread is already closed'], 400);
+        }
+
+        $thread->status = 'closed';
+        $thread->save();
+
+        return response()->json([
+            'message' => 'Thread closed successfully',
+            'thread' => $thread
+        ]);
+    }
+
+
 }
